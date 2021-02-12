@@ -156,12 +156,12 @@ if(members = bot1) {
 let sebeb = `${member.user.tag} Adlı Sahip Kullanıcı Sunucudan Ayrıldı İçin.`
 const embed = new Discord.MessageEmbed()
 .setColor(renk)
-.setAuthor(message.author.username)
+.setAuthor(message.author.username,message.author.avatarURL())
 .setDescription(`\`${member.user.tag}\` Adlı Kullanıcı Sunucudan Ayrdıldı!
 ${bot} Adlı Botu Sunucudan Engelendi.`)
 const embed2 = new Discord.MessageEmbed()
 .setColor(renk)
-.setAuthor(message.author.username)
+.setAuthor(message.author.username,message.author.avatarURL())
 .setDescription(`\`${member.user.tag}\` Adlı Kullanıcı Sunucudan Ayrdıldın
 ${bot} Adlı Botu Sunucudan Engelendi.
 Geri Gelerek Botunu Ekletmen Gerek 
