@@ -60,8 +60,8 @@ exports.run = function(client, message, args) {
   .setFooter('» Onaylandığı Zaman ')
   .setTimestamp()
   sahip.send(embedd);
-    client.channels.cache.get(onaylog).send()
-  let embed2 = new Discord.MessageEmbed(`${sahip}`)
+    client.channels.cache.get(onaylog).send(`${sahip}`)
+  let embed2 = new Discord.MessageEmbed()
   .setColor(renk)
   .setAuthor(sahipm.username, message.author.avatarURL())
   .setDescription(`:tada: \`${bots.username}#${bots.discriminator} (${botisim.id})\` Adlı Botu Başarılı Bir Şekilde Onaylandı!`)
