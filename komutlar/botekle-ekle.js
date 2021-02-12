@@ -44,7 +44,7 @@ if(!prefix) return message.channel.send(`Lütfen eksik kısımları doldurun.\n*
     client.channels.cache.get(sira).send(message.author)
     let embed3 = new Discord.MessageEmbed()
     .setColor(renk)
-    .setAuthor(message.author.username)
+    .setAuthor(message.author.username message.author.avatarURL())
     .setDescription(`
     Sisteme Bir Bot Eklendi, Bu Bot İle Sırada Toplam ${sıra} Bot Mevcut!`)
     .addField("**Sahip Bilgi**",`${message.author} **(\`${message.author.tag}\`)**`)
