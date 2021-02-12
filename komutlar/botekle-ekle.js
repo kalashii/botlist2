@@ -12,6 +12,7 @@ let botID = args[0];
   let uye = client.users.cache.get(message.author)
   let bots = client.users.cache.get(botID)
   let sıra = db.fetch(`sıra_${message.guild.id}`)
+  let sırası = sıra || 1
   let emb = new Discord.MessageEmbed()
   .setDescription(`<:tr:780484679227932704> Sadece 1 bot ekleyebilirsin.
 <:en:780485586535448616> You can add only one bot.`)
@@ -46,7 +47,7 @@ if(!prefix) return message.channel.send(`Lütfen eksik kısımları doldurun.\n*
     .setColor(renk)
     .setAuthor(message.author.username , message.author.avatarURL())
     .setDescription(`
-    Sisteme Bir Bot Eklendi, Bu Bot İle Sırada Toplam ${sıra} Bot Mevcut!`)
+    Sisteme Bir Bot Eklendi, Bu Bot İle Sırada Toplam ${sırası} Bot Mevcut!`)
     .addField("**Sahip Bilgi**",`${message.author} **(\`${message.author.tag}\`)**`)
     .addField("**Bot Hakkında**",`${bots.username}#${bots.discriminator} **(\`${botID}\`)**`)
     .setFooter(client.user.username, client.user.avatarURL({dynamic: true}))
