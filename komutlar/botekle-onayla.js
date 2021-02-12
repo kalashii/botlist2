@@ -62,7 +62,7 @@ exports.run = function(client, message, args) {
   sahip.send(embedd);
   let embed2 = new Discord.MessageEmbed()
   .setColor(renk)
-  .setAuthor(sahipm.username,sahipm.author.avatarURL())
+  .setAuthor(sahipm.username, message.author.avatarURL())
   .setDescription(`:tada: \`${bots.username}#${bots.discriminator} (${botisim.id})\` Adlı Botu Başarılı Bir Şekilde Onaylandı!`)
   .addField("**Sahip Bilgi**",`${sahip} **(\`${sahipm.tag}\`)**`)
   .setFooter(client.user.username, client.user.avatarURL({dynamic: true}))
